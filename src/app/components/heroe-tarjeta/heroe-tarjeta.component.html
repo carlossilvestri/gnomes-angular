@@ -1,0 +1,10 @@
+<div class="card animated fadeIn fast">
+    <img [defaultImage]="defaultImage" [lazyLoad]="brastlewark.thumbnail" class="card-img-top" [alt]="brastlewark.id ">
+    <div class="card-body">
+        <h5 class="card-title">{{ brastlewark.name }}</h5>
+        <p class="card-text">Hair color: {{ brastlewark.hair_color }}</p>
+        <p class="card-text">Height: {{ brastlewark.height }}</p>
+        <p class="card-text">Age: {{ brastlewark.age }} years</p>
+        <button (click)="seeGnome()" class="btn btn-outline-primary btn-block">See more</button>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<h1>
+  Looking for: <small>{{ termino }}</small>
+</h1>
+<hr />
+<ng-container *ngIf="!loadingAllBrastlewark">
+  <div
+    *ngIf="(allBrastlewark.Brastlewark | filtergnomes: termino).length == 0"
+    class="row"
+  >
+    <div class="col-md-12">
+      <div class="alert alert-info">
+        No existen resultados con el termino: {{ termino }}
+      </div>
+    </div>
+  </div>
+  <div class="card-columns">
+    <app-heroe-tarjeta
+      [brastlewark]="brastlewark"
+      [index]="i"
+      *ngFor="
+        let brastlewark of allBrastlewark.Brastlewark | filtergnomes: termino;
+        let i = index
+      "
+    ></app-heroe-tarjeta>
+  </div>
+</ng-container>
+<ng-container *ngIf="loadingAllBrastlewark">
+  <app-loading></app-loading>
+</ng-container>

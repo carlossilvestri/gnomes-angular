@@ -1,0 +1,30 @@
+<h1>{{ brastlewark.name | uppercase}}</h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="brastlewark.thumbnail" class="img-fluid" [alt]="brastlewark.name">
+        <br>
+        <a [routerLink]="['/brastlewarks']" class="btn btn-outline-danger btn-block mt-2">Go back</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ brastlewark.name }}</h3>
+        <hr>
+        <p>Age {{ brastlewark.age }}</p>
+        <hr>
+        <p>Weight {{ brastlewark.weight }}</p>
+        <hr>
+        <p>Height {{ brastlewark.height }}</p>
+        <p class="card-text">Professions: <span *ngIf="brastlewark.professions.length === 0">No Professions.</span></p>
+        <ul *ngIf="brastlewark.professions.length > 0">
+            <li *ngFor="let profession of brastlewark.professions">{{ profession }}</li>
+        </ul>
+        <p class="card-text">Friends: <span *ngIf="brastlewark.friends.length === 0">No friends.</span></p>
+        <ul *ngIf="brastlewark.friends.length > 0">
+            <li *ngFor="let friend of brastlewark.friends">{{ friend }}</li>
+        </ul>
+        <div class="">
+            <img class="img-150px" *ngIf="heroe.casa == 'Marvel'" src="assets/img/marvel-logo.png" alt="">
+            <img class="img-150px" *ngIf="heroe.casa == 'DC'" src="assets/img/dc-logo.png" alt="">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<h1>Gnomes<small> at Brastlewark</small></h1>
+<hr>
+<ng-container *ngIf="!loadingAllBrastlewark">
+    <div class="card-columns animate__animated animate__fadeIn">
+        <app-heroe-tarjeta [brastlewark]="brastlewark" [index]="i" *ngFor="let brastlewark of allBrastlewark.Brastlewark; let i = index"></app-heroe-tarjeta>
+    </div>
+</ng-container>
+<ng-container *ngIf="loadingAllBrastlewark">
+    <app-loading></app-loading>
+</ng-container>
