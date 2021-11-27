@@ -13,7 +13,7 @@ export class BuscadorComponent implements OnInit {
   allBrastlewark: AllBrastlewark;
   termino: string = '';
   loadingAllBrastlewark: Boolean = false;
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, public brastlewarkService: BrastlewarkService) { }
+  constructor(private activatedRoute: ActivatedRoute, public brastlewarkService: BrastlewarkService) { }
 
   ngOnInit(): void {
     this.onInitBuscador();
